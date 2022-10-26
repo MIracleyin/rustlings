@@ -20,6 +20,7 @@ fn main() {
     let mut completed_threads = 0;
     for handle in handles {
         // TODO: a struct is returned from thread::spawn, can you use it?
+        handle.join().unwrap();
         completed_threads += 1;
     }
 
