@@ -16,11 +16,12 @@ pub fn factorial(num: u64) -> u64 {
     //     0 => 1,
     //     _ => num * factorial(num - 1)
     // }
-    if num == 0 {
-        1
-    } else {
-        (1..=num).fold(1u64, |mul, x| mul*x)
-    }
+    // if num == 0 {
+    //     1
+    // } else {
+    //     (1..=num).fold(1u64, |mul, x| mul*x)
+    // }
+    (1..=num).fold(1, |mul, x| mul*x)
 
 }
 
